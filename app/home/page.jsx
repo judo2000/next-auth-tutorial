@@ -6,6 +6,7 @@ import { redirect } from "next/navigation";
 const HomePage = async () => {
   const session = await auth();
 
+  console.log("session ", session);
   if (!session?.user) redirect("/");
   return (
     <div className="flex flex-col items-center m-4">
@@ -21,7 +22,7 @@ const HomePage = async () => {
           />
         </>
       ) : (
-        <h1 className="text-3xl my-2">Welcome, {session?.user?.email}</h1>
+        <h1 className="text-3xl my-2">Welcome, {session?.user?.firstName}</h1>
       )}
       <Logout />
     </div>
