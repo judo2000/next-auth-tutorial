@@ -1,4 +1,5 @@
 import { connectDB } from "../lib/mongo";
+import Navbar from "../components/Navbar";
 import "./globals.css";
 
 export const metadata = {
@@ -11,7 +12,10 @@ export default async function RootLayout({ children }) {
 
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        <main className="p-2">{children}</main>
+      </body>
     </html>
   );
 }

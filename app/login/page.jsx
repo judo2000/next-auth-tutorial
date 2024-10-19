@@ -1,7 +1,7 @@
+import LoginForm from "../../components/LoginForm";
 import Link from "next/link";
-import LoginForm from "../components/LoginForm";
 
-export default function Home() {
+const LoginPage = () => {
   return (
     <div className="flex flex-col justify-center items-center m-4">
       <h1 className="text-3xl my-3">Hey, time to sign in</h1>
@@ -14,4 +14,6 @@ export default function Home() {
       </p>
     </div>
   );
-}
+};
+
+export default LoginPage;
